@@ -61,22 +61,22 @@ Al final tendrás un feedback sobre aspectos a destacar y a mejorar en tu ejerci
 Vamos a listar los criterios de evaluación de este ejercicio. Si no superas al menos el 80% de estos criterios o no has superado algún criterio clave (marcados con *) te pediremos que realices una re-evaluación con el fin de que termines el curso mejor preparada y enfrentes tu primera experiencia profesional con más seguridad. En caso contrario, estás aprendiendo al ritmo que hemos pautado para poder afrontar los conocimientos del siguiente módulo.
 
 React básico
-* Crea componentes con sintaxis correcta 
-* Crea una estructura adecuada de componentes 
-* Usa las props para pasar datos a componentes hijos 
-* Sabe pintar listados 
-* Sabe usar métodos funcionales de array (map, filter, etc.) 
-* Usa el estado para gestionar información de la interfaz 
-* El componente principal App.js maneja el estado de la aplicación 
-* Usa eventos en React para atender a interacciones del usuario 
-* Usa métodos / hooks del ciclo de vida para las peticiones al servidor
-* Escribe un código sólido, sin errores en la consola 
+* Crea componentes con sintaxis correcta *
+* Crea una estructura adecuada de componentes *
+* Usa las props para pasar datos a componentes hijos *
+* Sabe pintar listados *
+* Sabe usar métodos funcionales de array (map, filter, etc.) *
+* Usa el estado para gestionar información de la interfaz *
+* El componente principal App.js maneja el estado de la aplicación *
+* Usa eventos en React para atender a interacciones del usuario *
+* Usa métodos / hooks del ciclo de vida para las peticiones al servidor *
+* Escribe un código sólido, sin errores en la consola *
 
-Usa propTypes para evitar errores de tipado
-Tiene soltura a la hora de realizar cambios en el ejercicio presencial
-React router: Crea rutas navegables dentro de una aplicación
-Issues: Haber resuelto las issues de la evaluación intermedia*
-Otros criterios a tener en cuenta: Usar inglés para nombres de variables, funciones, clases, mensajes de commit, nombres de ficheros. El repositorio de GitHub debe tener README.
+* Usa propTypes para evitar errores de tipado
+* Tiene soltura a la hora de realizar cambios en el ejercicio presencial
+* React router: Crea rutas navegables dentro de una aplicación
+* Issues: Haber resuelto las issues de la evaluación intermedia*
+* Otros criterios a tener en cuenta: Usar inglés para nombres de variables, funciones, clases, mensajes de commit, nombres de ficheros. El repositorio de GitHub debe tener README.
 
 # Wubba Lubba Dub Dub!!
  
