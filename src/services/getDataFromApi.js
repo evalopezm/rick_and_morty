@@ -1,14 +1,14 @@
 const getDataFromApi = () => {
   return (
-    fetch('https://rickandmortyapi.com/api/character/1,2,3,7,8,13')
+    fetch('https://rickandmortyapi.com/api/character/?page=1')
       //   https://rickandmortyapi.com/api/character/?page=1
       .then((response) => response.json())
       .then((data) => {
-        return data.map((item) => {
+        return data.results.map((item) => {
           return {
             id: item.id,
             name: item.name,
-            spieces: item.species,
+            species: item.species,
             photo: item.image,
             status: item.status,
             origin: item.origin.name,

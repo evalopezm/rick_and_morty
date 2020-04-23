@@ -1,4 +1,9 @@
 .character-card {
-  width: 300px;
-  border: 2px red solid;
+  width: 150px;
+  border: 2px black solid;
+  margin: 10px;
+}
+
+.character-photo {
+  width: 100%;
 }

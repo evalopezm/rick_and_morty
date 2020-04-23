@@ -1,9 +1,14 @@
 import React from 'react';
 
-function Filters() {
+function Filters(props) {
+  const inputListener = (ev) => {
+    props.charactersFilter(ev.target.value);
+  };
+
   return (
     <form>
-      <input></input>
+      <label htmlFor='characterSearcher'>Busca a tu personaje favorito: </label>
+      <input id='characterSearcher' type='text' onChange={inputListener} placeholder='Rick'></input>
     </form>
   );
 }

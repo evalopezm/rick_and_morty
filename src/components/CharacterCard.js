@@ -2,7 +2,7 @@ import React from 'react';
 import '../stylesheets/characterCard.css';
 
 function CharacterCard(props) {
-  //   console.log(props);
+  // console.log(props);
 
   return (
     <li className='character-card'>
