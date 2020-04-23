@@ -1,13 +1,14 @@
 import React from 'react';
+import '../stylesheets/characterCard.css';
 
 function CharacterCard(props) {
   //   console.log(props);
 
   return (
-    <li>
-      <p>Photo:X</p>
-      <p>Name:X</p>
-      <p>Species:X</p>
+    <li className='character-card'>
+      <img src={props.photo} />
+      <p>Name: {props.name}</p>
+      <p>Species: {props.species}</p>
     </li>
   );
 }

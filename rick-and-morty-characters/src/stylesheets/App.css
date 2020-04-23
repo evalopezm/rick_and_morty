@@ -12,11 +12,6 @@
   color: white;
 }
 
-.character-list {
-  display: flex;
-  justify-content: space-around;
-}
-
 .text {
   /* color: white; */
 }

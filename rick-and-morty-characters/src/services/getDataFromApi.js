@@ -5,7 +5,6 @@ const getDataFromApi = () => {
       .then((response) => response.json())
       .then((data) => {
         return data.map((item) => {
-          //   console.log(item);
           return {
             id: item.id,
             name: item.name,

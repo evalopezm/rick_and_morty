@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from '../images/logo.png';
 import CharacterList from './CharacterList';
 import Filters from './Filters';
@@ -6,12 +6,14 @@ import '../stylesheets/App.css';
 import getDataFromApi from '../services/getDataFromApi';
 
 function App() {
+  const [characters, setCharacters] = useState([]);
   useEffect(() => {
-    console.log('me estoy montando');
     getDataFromApi().then((data) => {
-      console.log(data);
+      setCharacters(data);
     });
-  });
+  }, []);
+
+  console.log(characters);
 
   return (
     <div className='App'>
@@ -20,7 +22,7 @@ function App() {
       </header>
       <main>
         <Filters />
-        <CharacterList />
+        <CharacterList characters={characters} />
       </main>
     </div>
   );
