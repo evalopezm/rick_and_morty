@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 import Image from '../images/logo.png';
 import CharacterList from './CharacterList';
 import Filters from './Filters';
+import CharacterSearch from './CharacterSearch';
+import CharacterDetail from './CharacterDetail';
 import '../stylesheets/App.css';
 import getDataFromApi from '../services/getDataFromApi';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   const [characters, setCharacters] = useState([]);
@@ -19,11 +22,16 @@ function App() {
     setNameFilter(data);
   };
 
-  // console.log('name:', nameFilter);
-
   const FilteredCharacters = characters.filter((character) => {
     return character.name.toLowerCase().includes(nameFilter.toLowerCase());
   });
+
+  // Call to characterDetail
+
+  // const renderCharacterDetail = (props) => {
+  //   console.log(props);
+  //   return <CharacterDetail />;
+  // };
 
   return (
     <div className='App'>
@@ -37,5 +45,9 @@ function App() {
     </div>
   );
 }
+// <Switch>
+//   <Route path='/character/:characterId' render={renderCharacterDetail} />
+//   {/* <CharacterDetail /> */}
+// </Switch>
 
 export default App;

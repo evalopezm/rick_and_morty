@@ -1,14 +1,15 @@
 import React from 'react';
 import '../stylesheets/characterCard.css';
+import { Link } from 'react-router-dom';
 
 function CharacterCard(props) {
-  // console.log(props);
-
   return (
     <li className='character-card'>
-      <img className='character-photo' src={props.photo} alt={`${props.name}`} />
-      <p>Name: {props.name}</p>
-      <p>Species: {props.species}</p>
+      <Link to={`/character/${props.id}`}>
+        <img className='character-photo' src={props.photo} alt={`${props.name}`} />
+        <p>Name: {props.name}</p>
+        <p>Species: {props.species}</p>
+      </Link>
     </li>
   );
 }
