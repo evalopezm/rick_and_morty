@@ -4,7 +4,7 @@ import CharacterSearch from './CharacterSearch';
 import '../stylesheets/App.css';
 import getDataFromApi from '../services/getDataFromApi';
 import CharacterDetail from './CharacterDetail';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
   //states

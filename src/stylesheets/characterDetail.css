@@ -20,3 +20,11 @@
   background-color: #00b0c9;
   display: flex;
 }
+
+.error-image {
+  width: 270px;
+}
+
+.error-text {
+  margin-left: 15px;
+}
