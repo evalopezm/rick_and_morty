@@ -1,4 +1,7 @@
 .character-card {
+  text-decoration: none;
+  background-color: #00b0c9;
+  font: white;
   width: 150px;
   border: 2px black solid;
   margin: 10px;
@@ -6,4 +9,18 @@
 
 .character-photo {
   width: 100%;
+}
+
+.card-link {
+  text-decoration: none;
+  color: white;
+}
+
+.card-text {
+  margin-left: 2px;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10px;
 }

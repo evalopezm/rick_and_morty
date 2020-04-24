@@ -1,4 +1,5 @@
 import React from 'react';
+import '../stylesheets/filters.css';
 
 function Filters(props) {
   const inputListener = (ev) => {
@@ -7,8 +8,10 @@ function Filters(props) {
 
   return (
     <form>
-      <label htmlFor='characterSearcher'>Busca a tu personaje favorito: </label>
-      <input id='characterSearcher' type='text' onChange={inputListener} placeholder='Rick'></input>
+      <label className='text' htmlFor='characterSearcher'>
+        Busca a tu personaje favorito:{' '}
+      </label>
+      <input className='input' id='characterSearcher' type='text' placeholder='Rick' onChange={inputListener}></input>
     </form>
   );
 }

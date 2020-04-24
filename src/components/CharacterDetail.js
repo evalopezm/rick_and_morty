@@ -1,16 +1,26 @@
 import React from 'react';
 import '../stylesheets/characterDetail.css';
-import Image from '../images/logo.png';
+import { Link } from 'react-router-dom';
 
-function CharacterDetail() {
+function CharacterDetail(props) {
+  console.log(props.character);
+
   return (
     <div className='character-detail'>
-      <header className='App-header'>
-        <img src={Image} alt='Logo de Rick and Morty' />
-      </header>
       <main>
-        <h1>El personaje aquí</h1>
-        <button>x</button>
+        <Link to='/CharacterSearch'>
+          <p className='back-link'>Back</p>
+        </Link>
+        <div className='detail-card'>
+          <img className='detail-img' src={props.character.photo} alt={props.character.name}></img>
+          <div>
+            <h3>{props.character.name}</h3>
+            <p>Status: {props.character.status}</p>
+            <p>Species: {props.character.species}</p>
+            <p>Origin: {props.character.origin}</p>
+            <p>Episodes: {props.character.episodes}</p>
+          </div>
+        </div>
       </main>
     </div>
   );

@@ -4,13 +4,10 @@ import Filters from './Filters';
 
 function CharacterSearch(props) {
   return (
-    <p>
-      hello
-      <Filters />
-      <CharacterList />
-      {/* <Filters charactersFilter={props.charactersFilter} />
-      <CharacterList characters={props.FilteredCharacters} /> */}
-    </p>
+    <>
+      <Filters charactersFilter={props.charactersFilter} />
+      <CharacterList characters={props.characters} />
+    </>
   );
 }
 

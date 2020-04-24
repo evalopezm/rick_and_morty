@@ -1,4 +1,22 @@
 .character-detail {
   background-color: black;
   color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: monospace;
+}
+
+.back-link {
+  text-decoration: none;
+  color: white;
+  transform: translate(200px, 10px);
+}
+
+.detail-card {
+  height: 300px;
+  width: 475px;
+  background-color: #00b0c9;
+  display: flex;
 }

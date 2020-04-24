@@ -3,11 +3,11 @@ import CharacterCard from './CharacterCard';
 import '../stylesheets/characterList.css';
 
 function CharacterList(props) {
-  const CharacterLis = props.characters.map((character) => {
-    return <CharacterCard id={character.id} key={character.id} photo={character.photo} name={character.name} species={character.species} />;
+  const characterLis = props.characters.map((character) => {
+    return <CharacterCard key={character.id} id={character.id} photo={character.photo} name={character.name} species={character.species} />;
   });
 
-  return <ul className='character-list'>{CharacterLis}</ul>;
+  return <ul className='character-list'>{characterLis}</ul>;
 }
 
 export default CharacterList;
