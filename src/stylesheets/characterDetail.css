@@ -10,8 +10,14 @@
 
 .back-link {
   text-decoration: none;
+}
+
+.back-link-icons {
+  text-decoration: none;
   color: white;
-  transform: translate(200px, 10px);
+  transform: translate(420px, 10px);
+  display: flex;
+  flex-direction: row;
 }
 
 .detail-card {
@@ -27,4 +33,15 @@
 
 .error-text {
   margin-left: 15px;
+}
+
+.back-text {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.detail-info {
+  text-align: start;
+  margin-left: 20px;
+  margin-top: 20px;
 }

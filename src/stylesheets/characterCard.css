@@ -1,10 +1,10 @@
 .character-card {
   text-decoration: none;
   background-color: #00b0c9;
-  font: white;
-  width: 150px;
   border: 2px black solid;
   margin: 10px;
+  width: 190px;
+  text-align: start;
 }
 
 .character-photo {
@@ -17,10 +17,16 @@
 }
 
 .card-text {
-  margin-left: 2px;
   font-family: monospace;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   margin-left: 10px;
+}
+
+.card-name {
+  margin-bottom: 0;
+}
+
+.card-species {
+  margin-top: 5px;
 }
