@@ -8,8 +8,11 @@ function CharacterDetail(props) {
   return (
     <div className='character-detail'>
       <main>
-        <Link to='/CharacterSearch'>
-          <p className='back-link'>Back</p>
+        <Link to='/'>
+          <div className='back-link'>
+            <i class='fas fa-angle-left' />
+            <p>Back</p>
+          </div>
         </Link>
         <div className='detail-card'>
           <img className='detail-img' src={props.character.photo} alt={props.character.name}></img>

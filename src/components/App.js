@@ -37,12 +37,12 @@ function App() {
     <div className='App'>
       <header className='App-header'>
         <img src={Image} alt='Logo de Rick and Morty' />
-        {/* <Link to='/CharacterDetail'>CharacterDetail</Link>
-        <Link to='/CharacterSearch'>CharacterSearch</Link> */}
       </header>
       <main>
-        <CharacterSearch characters={FilteredCharacters} charactersFilter={charactersFilter} />
         <Switch>
+          <Route exact path='/'>
+            <CharacterSearch characters={FilteredCharacters} charactersFilter={charactersFilter} />
+          </Route>
           <Route path='/character/:characterId' render={renderCharacterDetail} />
         </Switch>
       </main>
