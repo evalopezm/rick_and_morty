@@ -1,8 +1,9 @@
 import React from 'react';
-import '../stylesheets/characterCard.scss';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import '../stylesheets/characterCard.scss';
 
+// Paint each character card in the list
 function CharacterCard(props) {
   return (
     <li className='character-card'>
@@ -17,6 +18,7 @@ function CharacterCard(props) {
   );
 }
 
+// Exports and propTypes
 export default CharacterCard;
 CharacterCard.propTypes = {
   id: PropTypes.number,

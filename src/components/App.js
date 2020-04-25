@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import Image from '../images/logo.png';
-import CharacterSearch from './CharacterSearch';
-import '../stylesheets/App.scss';
-import getDataFromApi from '../services/getDataFromApi';
-import CharacterDetail from './CharacterDetail';
 import { Switch, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import Image from '../images/logo.png'; // Header image
+import getDataFromApi from '../services/getDataFromApi'; // Api
+import CharacterSearch from './CharacterSearch'; // Search input
+import CharacterDetail from './CharacterDetail'; // Details card
+import '../stylesheets/App.scss';
 
 function App() {
   //states
-  const [characters, setCharacters] = useState([]);
-  const [nameFilter, setNameFilter] = useState('');
+  const [characters, setCharacters] = useState([]); //Array
+  const [nameFilter, setNameFilter] = useState(''); //input value
+  //get characters from API and put them in the state
   useEffect(() => {
     getDataFromApi().then((data) => {
       setCharacters(data);
@@ -21,12 +22,16 @@ function App() {
   const charactersFilter = (data) => {
     setNameFilter(data);
   };
-  // console.log(nameFilter);
-
+  // Organize characters by name
+  characters.sort(function (a, b) {
+    if (a.name < b.name) return -1;
+    if (a.name > b.name) return 1;
+    return 0;
+  });
+  // Filter characters by search
   const FilteredCharacters = characters.filter((character) => {
     return character.name.toLowerCase().includes(nameFilter.toLowerCase());
   });
-  // if (FilteredCharacters.length === 0) return <CharacterNotFound />;
 
   // Router
   const renderCharacterDetail = (props) => {
@@ -37,6 +42,7 @@ function App() {
     if (foundCharacter !== undefined) return <CharacterDetail character={foundCharacter} />;
   };
 
+  // Paint
   return (
     <div className='App'>
       <header className='header'>
@@ -54,6 +60,7 @@ function App() {
   );
 }
 
+// Exports and propTypes
 export default App;
 App.propTypes = {
   match: PropTypes.any,
