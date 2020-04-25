@@ -1,8 +1,9 @@
 import React from 'react';
-import Image from '../images/characternotfound.jpg';
 import '../stylesheets/characterDetail.scss';
+import Image from '../images/characternotfound.jpg'; // Teddy Bear image
 //Shares stylesheets with characterDetail
 
+// When you don't find a character matching your search
 function CharacterNotFound(props) {
   return (
     <div className='character-detail'>
@@ -19,4 +20,5 @@ function CharacterNotFound(props) {
   );
 }
 
+// Exports and propTypes
 export default CharacterNotFound;

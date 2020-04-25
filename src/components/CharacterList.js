@@ -1,8 +1,8 @@
 import React from 'react';
-import CharacterCard from './CharacterCard';
-import '../stylesheets/characterList.scss';
 import PropTypes from 'prop-types';
-import CharacterNotFound from './CharacterNotFound';
+import '../stylesheets/characterList.scss';
+import CharacterCard from './CharacterCard'; // Cards for each character in the list
+import CharacterNotFound from './CharacterNotFound'; // When you don't find a character
 
 function CharacterList(props) {
   // Search in the array all the characters that matches our input value
@@ -15,6 +15,7 @@ function CharacterList(props) {
   return <ul className='character-list'>{characterLis}</ul>;
 }
 
+// Exports and propTypes
 export default CharacterList;
 CharacterList.propTypes = {
   characters: PropTypes.array,

@@ -1,8 +1,9 @@
 import React from 'react';
-import CharacterList from './CharacterList';
-import Filters from './Filters';
 import PropTypes from 'prop-types';
+import Filters from './Filters'; // input for search
+import CharacterList from './CharacterList'; // List of characters
 
+// Unifies the search and find components
 function CharacterSearch(props) {
   return (
     <>
@@ -12,6 +13,7 @@ function CharacterSearch(props) {
   );
 }
 
+// Exports and propTypes
 export default CharacterSearch;
 CharacterSearch.propTypes = {
   charactersFilter: PropTypes.func,

@@ -3,21 +3,23 @@ import { Link } from 'react-router-dom';
 import '../stylesheets/characterDetail.scss';
 import PropTypes from 'prop-types';
 
+// Paint character Details card
 function CharacterDetail(props) {
+  // dead icon
   const isDead = () => {
     if (props.character.status === 'Dead') return <i className='fas fa-skull-crossbones'></i>;
     else {
       return <i className='far fa-smile'></i>;
     }
   };
-
+  // Human or alien icon
   const isHuman = () => {
     if (props.character.species === 'Human') return <i className='fas fa-male'></i>;
     else {
       return <i className='fab fa-reddit-alien'></i>;
     }
   };
-
+  // paint
   return (
     <div className='character-detail'>
       <main>
@@ -47,6 +49,7 @@ function CharacterDetail(props) {
   );
 }
 
+// Exports and propTypes
 export default CharacterDetail;
 CharacterDetail.propTypes = {
   character: PropTypes.object,
