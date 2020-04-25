@@ -12,12 +12,14 @@ Para esta primera parte del ejercicio es suficiente pintar la información sin m
 
 2. Filtrado de personajes: Ahora que ya tenemos el listado de personajes en pantalla, la segunda parte consiste en poder buscarlos por nombre. Para eso, añadimos un input a la interfaz, de forma que al ir escribiendo un nombre queden en la interfaz solo los personajes cuyo nombre contiene las letras escritas. En el pantallazo de arriba, al escribir 'Ric' aparecen personajes cuyo nombre completo contiene esas letras en ese orden.
 
-3 Componentes del listado de personajes El listado debe tener los siguientes componentes como mínimo:
+3. Componentes del listado de personajes El listado debe tener los siguientes componentes como mínimo:
   *Componente para los filtros
   *Componente para el listado
   *Componente para la tarjeta de cada personaje del listado Componente para el detalle de cada personaje
+  
 4. Detalle de personajes: Vamos a implementar una nueva funcionalidad: al hacer clic sobre la tarjeta de un personaje, su información aparecerá a pantalla completa. Para hacer esto usaremos rutas y React router. En la pantalla de detalle aparecerá además de la foto, nombre y especie, el planeta de origen, el número de episodios en los que aparece y si está vivo o muerto.
  NOTA: en principio no es necesario tener en cuenta si las letras están en mayúscula / minúscula para la búsqueda, pero si queréis añadir esta mejora pues genial.
+ 
 5. Detallitos de calidad: 
   *Como nos gusta cuidar la semántica, el campo de texto debe estar recubierto por una etiqueta <form />.
   *Si estando en el campo de filtrado pulsamos intro debéis impedir que el navegador navegue o cambie la ruta sin querer.
@@ -35,14 +37,22 @@ La evaluación solo se considerará terminada cuando: Esté publicada en GitHub 
 El enlace a GitHub Pages esté en la página página principal del repositorio, en la parte superior, al lado de la descripción.
 ## Normas
 Este ejercicio está pensado para que lo realices de forma individual en clase, pero podrás consultar tus dudas con la profesora y tus compañeras si lo consideras necesario. Ellas no te darán directamente la solución de tu duda, pero sí pistas para poder solucionarla. Aún facilitando la comunicación entre compañeras, durante la prueba no debes copiar código de otra persona ni acceder a su portátil. Confiamos en tu responsabilidad.
+
 La evaluación es una buena oportunidad para conocer cómo estás progresando, saber qué temas debes reforzar durante las siguientes semanas y cuáles dominas. Te recomendamos que te sientas cómoda con el ejercicio que entregues y no envíes cosas copiadas que no entiendas.
+
 Si detectamos que has entregado código que no es tuyo, no entiendes y no lo puedes defender, pasarás directamente a la re-evaluación del módulo. Tu objetivo no debería ser pasar la evaluación sino convertirte en programadora, y esto debes tenerlo claro en todo momento.
+
 Una vez entregado el ejercicio realizarás una revisión del mismo con la profesora (25 minutos), que se asemenjará a una entrevista técnica: te pedirá que expliques las decisiones tomadas para realizarlo y te propondrá realizar cambios in situ sobre tu solución.
+
 Es una oportunidad para practicar la dinámica de una entrevista técnica donde te van a proponer cambios sobre tu código que no conoces a priori. Si evitas que otras compañeras te den pistas sobre la dinámica de feedback, podrás aprovecharlo como una práctica y pasar los nervios con la profesora en lugar de en tu primera entrevista de trabajo.
 Al final tendrás un feedback sobre aspectos a destacar y a mejorar en tu ejercicio, y sabrás qué objetivos de aprendizaje has superado de los listados a continuación.
+
 ## Criterios de evaluación
+
 Vamos a listar los criterios de evaluación de este ejercicio. Si no superas al menos el 80% de estos criterios o no has superado algún criterio clave (marcados con *) te pediremos que realices una re-evaluación con el fin de que termines el curso mejor preparada y enfrentes tu primera experiencia profesional con más seguridad. En caso contrario, estás aprendiendo al ritmo que hemos pautado para poder afrontar los conocimientos del siguiente módulo.
+
 React básico
+
 * Crea componentes con sintaxis correcta 
 * Crea una estructura adecuada de componentes 
 * Usa las props para pasar datos a componentes hijos 
@@ -53,6 +63,7 @@ React básico
 * Usa eventos en React para atender a interacciones del usuario 
 * Usa métodos / hooks del ciclo de vida para las peticiones al servidor
 * Escribe un código sólido, sin errores en la consola 
+
 Usa propTypes para evitar errores de tipado
 Tiene soltura a la hora de realizar cambios en el ejercicio presencial
 React router: Crea rutas navegables dentro de una aplicación
