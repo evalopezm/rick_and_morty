@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 function CharacterSearch(props) {
   return (
     <>
-      <Filters charactersFilter={props.charactersFilter} />
-      <CharacterList characters={props.characters} />
+      <Filters charactersFilter={props.charactersFilter} nameFilter={props.nameFilter} />
+      <CharacterList characters={props.characters} nameFilter={props.nameFilter} />
     </>
   );
 }

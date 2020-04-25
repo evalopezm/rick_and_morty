@@ -5,7 +5,6 @@ import '../stylesheets/App.scss';
 import getDataFromApi from '../services/getDataFromApi';
 import CharacterDetail from './CharacterDetail';
 import { Switch, Route } from 'react-router-dom';
-import CharacterNotFound from './CharacterNotFound';
 import PropTypes from 'prop-types';
 
 function App() {
@@ -22,19 +21,12 @@ function App() {
   const charactersFilter = (data) => {
     setNameFilter(data);
   };
-  console.log(nameFilter);
+  // console.log(nameFilter);
 
   const FilteredCharacters = characters.filter((character) => {
     return character.name.toLowerCase().includes(nameFilter.toLowerCase());
   });
-  if (FilteredCharacters.length === 0) return <CharacterNotFound />;
-
-  // const FilteredCharacters = (props) => {
-  //   characters.filter((character) => {
-  //     return character.name.toLowerCase().includes(nameFilter.toLowerCase());
-  //   });
-  //   if (FilteredCharacters.length === 0) return <CharacterNotFound />;
-  // };
+  // if (FilteredCharacters.length === 0) return <CharacterNotFound />;
 
   // Router
   const renderCharacterDetail = (props) => {
@@ -53,10 +45,9 @@ function App() {
       <main>
         <Switch>
           <Route exact path='/'>
-            <CharacterSearch characters={FilteredCharacters} charactersFilter={charactersFilter} />
+            <CharacterSearch characters={FilteredCharacters} charactersFilter={charactersFilter} nameFilter={nameFilter} />
           </Route>
           <Route path='/character/:characterId' render={renderCharacterDetail} />
-          <Route exact path='/characternotfound' render={renderCharacterDetail} />
         </Switch>
       </main>
     </div>
