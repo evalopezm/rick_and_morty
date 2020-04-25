@@ -1,21 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Image from '../images/characternotfound.jpg';
-import '../stylesheets/characterDetail.css';
+import '../stylesheets/characterDetail.scss';
 
 function CharacterNotFound(props) {
-  console.log(props);
-
   return (
     <div className='character-detail'>
       <main>
-        <Link to='/'>
-          <div className='back-link'>
+        <Link className='character-detail-back-link' to='/'>
+          <div className='character-detail-back-link-icons'>
             <i className='fas fa-angle-left' />
-            <p className='back-text'>Back</p>
+            <p className='character-detail-back-text'>Back</p>
           </div>
         </Link>
-        <div className='detail-card'>
+        <div className='character-detail-card'>
           <img className='error-image' src={Image} alt='character not found'></img>
           <div>
             <h3 className='error-text'>We're so sorry</h3>

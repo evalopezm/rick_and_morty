@@ -1,6 +1,7 @@
 import React from 'react';
 import CharacterCard from './CharacterCard';
-import '../stylesheets/characterList.css';
+import '../stylesheets/characterList.scss';
+import PropTypes from 'prop-types';
 
 function CharacterList(props) {
   const characterLis = props.characters.map((character) => {
@@ -11,3 +12,7 @@ function CharacterList(props) {
 }
 
 export default CharacterList;
+CharacterList.propTypes = {
+  characters: PropTypes.array,
+  character: PropTypes.object,
+};

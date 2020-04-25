@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../stylesheets/characterDetail.css';
+import '../stylesheets/characterDetail.scss';
+import PropTypes from 'prop-types';
 
 function CharacterDetail(props) {
-  console.log(props.character);
   const isDead = () => {
     if (props.character.status === 'Dead') return <i className='fas fa-skull-crossbones'></i>;
     else {
@@ -21,15 +21,15 @@ function CharacterDetail(props) {
   return (
     <div className='character-detail'>
       <main>
-        <Link className='back-link' to='/'>
-          <div className='back-link-icons'>
+        <Link className='character-detail-back-link' to='/'>
+          <div className='character-detail-back-link-icons'>
             <i className='fas fa-angle-left' />
-            <p className='back-text'>Back</p>
+            <p className='character-detail-back-text'>Back</p>
           </div>
         </Link>
-        <div className='detail-card'>
-          <img className='detail-img' src={props.character.photo} alt={props.character.name}></img>
-          <div className='detail-info'>
+        <div className='character-detail-card'>
+          <img src={props.character.photo} alt={props.character.name}></img>
+          <div className='character-detail-info'>
             <h3>{props.character.name}</h3>
             <p>
               Status: {props.character.status} {isDead()}
@@ -48,3 +48,6 @@ function CharacterDetail(props) {
 }
 
 export default CharacterDetail;
+CharacterDetail.propTypes = {
+  character: PropTypes.object,
+};

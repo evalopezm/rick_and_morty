@@ -1,0 +1,46 @@
+@import './variables.scss';
+
+.character-detail {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $main-font;
+  &-back {
+    &-link {
+      text-decoration: none;
+      &-icons {
+        color: white;
+        transform: translate(420px, 10px);
+        display: flex;
+        transition: all ease 1s;
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+    &-text {
+      margin-top: 0;
+      margin-left: 10px;
+    }
+  }
+  &-card {
+    width: 475px;
+    background-color: $main-color;
+    display: flex;
+  }
+  &-info {
+    text-align: start;
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+}
+
+.error {
+  &-image {
+    width: 270px;
+  }
+  &-text {
+    margin-left: 15px;
+  }
+}

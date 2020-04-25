@@ -1,8 +1,10 @@
 import React from 'react';
-import '../stylesheets/filters.css';
+import '../stylesheets/filters.scss';
+import PropTypes from 'prop-types';
 
 function Filters(props) {
   const inputListener = (ev) => {
+    ev.preventDefault();
     props.charactersFilter(ev.target.value);
   };
 
@@ -17,3 +19,6 @@ function Filters(props) {
 }
 
 export default Filters;
+Filters.propTypes = {
+  charactersFilter: PropTypes.func,
+};

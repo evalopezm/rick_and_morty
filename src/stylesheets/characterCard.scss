@@ -1,0 +1,32 @@
+@import './variables.scss';
+
+.character-card {
+  background-color: $main-color;
+  margin: 10px;
+  width: 190px;
+  text-align: start;
+  transition: all ease 1s;
+  &:hover {
+    width: 195px;
+    box-shadow: 0px 0px 15px 10px $secondary-color;
+  }
+  &-photo {
+    width: 100%;
+  }
+  &-link {
+    text-decoration: none;
+    color: white;
+  }
+  &-text {
+    font-family: $main-font;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+  &-name {
+    margin-bottom: 0;
+  }
+  &-species {
+    margin-top: 5px;
+  }
+}
