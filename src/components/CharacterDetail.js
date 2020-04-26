@@ -22,7 +22,7 @@ function CharacterDetail(props) {
   // paint
   return (
     <div className='character-detail'>
-      <main>
+      <main className='character-detail-box'>
         <Link className='character-detail-back-link' to='/'>
           <div className='character-detail-back-link-icons'>
             <i className='fas fa-angle-left' />
