@@ -56,6 +56,9 @@ function App() {
           <Route path='/character/:characterId' render={renderCharacterDetail} />
         </Switch>
       </main>
+      <footer className='footer'>
+        <p className='footer-text'>© Created by Eva López Merino - 2020</p>
+      </footer>
     </div>
   );
 }

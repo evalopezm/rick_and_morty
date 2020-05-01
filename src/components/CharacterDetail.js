@@ -37,8 +37,7 @@ function CharacterDetail(props) {
               Status: {props.character.status} {isDead()}
             </p>
             <p>
-              Species: {props.character.species}
-              {isHuman()}
+              Species: {props.character.species} {isHuman()}
             </p>
             <p>Origin: {props.character.origin}</p>
             <p>Episodes: {props.character.episodes}</p>

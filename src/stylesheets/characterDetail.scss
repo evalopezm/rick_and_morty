@@ -18,6 +18,9 @@
         &:hover {
           color: $secondary-color;
         }
+        @media all and (max-width: 580px) {
+          transform: translate(240px, 10px);
+        }
       }
     }
     &-text {
@@ -26,9 +29,15 @@
     }
   }
   &-card {
-    width: 475px;
+    width: 500px;
     background-color: $main-color;
     display: flex;
+    @media all and (max-width: 580px) {
+      display: block;
+      width: 300px;
+      height: 520px;
+      margin-bottom: 30px;
+    }
   }
   &-info {
     text-align: start;

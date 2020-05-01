@@ -12,7 +12,7 @@ function Filters(props) {
   return (
     <form>
       <label className='text' htmlFor='characterSearcher'>
-        Busca a tu personaje favorito:
+        Find your favourite character:
       </label>
       <input className='input' id='characterSearcher' type='text' placeholder='example: Rick' onChange={inputListener} value={props.nameFilter}></input>
     </form>
