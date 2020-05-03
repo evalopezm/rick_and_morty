@@ -7,7 +7,7 @@ import CharacterList from './CharacterList'; // List of characters
 function CharacterSearch(props) {
   return (
     <>
-      <Filters charactersFilter={props.charactersFilter} nameFilter={props.nameFilter} />
+      <Filters charactersFilter={props.charactersFilter} nameFilter={props.nameFilter} statusFilter={props.statusFilter} aliveDeadFilter={props.aliveDeadFilter} />
       <CharacterList characters={props.characters} nameFilter={props.nameFilter} />
     </>
   );

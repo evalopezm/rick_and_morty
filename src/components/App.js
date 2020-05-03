@@ -11,6 +11,8 @@ function App() {
   //states
   const [characters, setCharacters] = useState([]); //Array
   const [nameFilter, setNameFilter] = useState(''); //input value
+  const [aliveDeadFilter, setAliveDeadFilter] = useState('all'); //input status
+
   //get characters from API and put them in the state
   useEffect(() => {
     getDataFromApi().then((data) => {
@@ -22,16 +24,29 @@ function App() {
   const charactersFilter = (data) => {
     setNameFilter(data);
   };
+  const statusFilter = (data) => {
+    setAliveDeadFilter(data);
+  };
+
   // Organize characters by name
   characters.sort(function (a, b) {
     if (a.name < b.name) return -1;
     if (a.name > b.name) return 1;
     return 0;
   });
+
   // Filter characters by search
-  const FilteredCharacters = characters.filter((character) => {
-    return character.name.toLowerCase().includes(nameFilter.toLowerCase());
-  });
+  const FilteredCharacters = characters
+    .filter((character) => {
+      return character.name.toLowerCase().includes(nameFilter.toLowerCase());
+    })
+    .filter((character) => {
+      if (aliveDeadFilter === 'all') {
+        return true;
+      } else {
+        return character.status === aliveDeadFilter;
+      }
+    });
 
   // Router
   const renderCharacterDetail = (props) => {
@@ -51,7 +66,7 @@ function App() {
       <main>
         <Switch>
           <Route exact path='/'>
-            <CharacterSearch characters={FilteredCharacters} charactersFilter={charactersFilter} nameFilter={nameFilter} />
+            <CharacterSearch characters={FilteredCharacters} charactersFilter={charactersFilter} nameFilter={nameFilter} statusFilter={statusFilter} aliveDeadFilter={aliveDeadFilter} />
           </Route>
           <Route path='/character/:characterId' render={renderCharacterDetail} />
         </Switch>
